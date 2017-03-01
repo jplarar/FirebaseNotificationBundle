@@ -1,0 +1,7 @@
+parameters:
+     firebase_fcm_client.class: JP\FirebaseNotification\Services\FirebaseFCMClient
+
+services:
+     firebase_fcm_client:
+         class:     %firebase_fcm_client.class%
+         arguments: [%server_key%]
