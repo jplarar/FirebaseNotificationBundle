@@ -4,4 +4,4 @@ parameters:
 services:
      firebase_fcm_client:
          class:     %firebase_fcm_client.class%
-         arguments: [%server_key%]
+         arguments: [%jp_firebase_notification.firebase_fcm.server_key%]
