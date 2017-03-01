@@ -34,7 +34,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new JP\FirebaseNotificationBundle(),
+        new JP\FirebaseNotificationBundle\JPFirebaseNotificationBundle()
     );
 }
 ```

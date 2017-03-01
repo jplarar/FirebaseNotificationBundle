@@ -1,5 +1,5 @@
 <?php
-namespace JP\FirebaseNotification;
+namespace JP\FirebaseNotificationBundle;
 
 use JP\FirebaseNotification\DependencyInjection\JPFirebaseNotificationExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
