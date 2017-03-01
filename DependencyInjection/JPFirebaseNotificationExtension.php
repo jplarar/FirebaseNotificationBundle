@@ -1,6 +1,6 @@
 <?php
 
-namespace JP\FirebaseNotification\DependencyInjection;
+namespace JP\FirebaseNotificationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

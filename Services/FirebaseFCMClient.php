@@ -1,6 +1,6 @@
 <?php
 
-namespace JP\FirebaseNotification\Services;
+namespace JP\FirebaseNotificationBundle\Services;
 
 class FirebaseFCMClient
 {
