@@ -1,5 +1,5 @@
 {
-    "name": "jp/firebase-notification-Bundle",
+    "name": "jp/firebase-notification-bundle",
     "description": "A Bundle for Symfony2 projects to send notifications for mobile devices through Firebase Cloud Messaging API ",
     "type": "symfony-bundle",
     "keywords": [
