@@ -1,5 +1,5 @@
 parameters:
-     firebase_fcm_client.class: JP\FirebaseNotification\Services\FirebaseFCMClient
+     firebase_fcm_client.class: JP\FirebaseNotificationBundle\Services\FirebaseFCMClient
 
 services:
      firebase_fcm_client:
