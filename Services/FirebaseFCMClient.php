@@ -16,31 +16,25 @@ class FirebaseFCMClient
 
     public function createMessage($message)
     {
-        if (!in_array("to", $message)) return false;
+        if (!array_key_exists("to", $message)) return false;
         $this->message["to"] = $message["to"];
-
-        if (in_array("title", $message)) {
+        if (array_key_exists("title", $message)) {
             $this->message["notification"]["title"] = $message["title"];
         }
-
-        if (in_array("body", $message)) {
+        if (array_key_exists("body", $message)) {
             $this->message["notification"]["body"] = $message["body"];
         }
-
-        if (in_array("badge", $message)) {
+        if (array_key_exists("badge", $message)) {
             $this->message["notification"]["badge"] = $message["badge"];
         }
-        if (in_array("data", $message)) {
+        if (array_key_exists("data", $message)) {
             $this->message["data"] = $message["data"];
         }
-
         return true;
     }
 
     public function sendMessage()
     {
-        if ($this->message == null) return null;
-
         $content = json_encode($this->message);
 
         $curl = curl_init(self::FCM_URL);
