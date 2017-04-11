@@ -63,7 +63,7 @@ jp_firebase_notification:
 ###Create message and send message
 ``` php
 <?php 
-    $fcm = $this->get('hype_mailchimp');
+    $fcm = $this->get('firebase_fcm_client');
     $fcm->createMessage('regular', array(
         'to' => 'XXXXXXXX',
         'title' => 'New message',
@@ -74,6 +74,5 @@ jp_firebase_notification:
         )
     ));
     $data = $fcm->sendMessage();
-     var_dump($data);
 ?>
 ```
