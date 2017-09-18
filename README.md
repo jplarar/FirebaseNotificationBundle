@@ -3,7 +3,7 @@ A Bundle for Symfony2 projects to send notifications for mobile devices through 
 
 ## Setup
 
-### Step 1: Download HypeMailchimp using composer
+### Step 1: Download FirebaseNotificationBundle using composer
 
 Add Firebase Notification in your composer.json:
 
