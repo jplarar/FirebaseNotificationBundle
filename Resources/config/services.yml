@@ -3,5 +3,6 @@ parameters:
 
 services:
      firebase_fcm_client:
-         class:     %firebase_fcm_client.class%
-         arguments: [%jp_firebase_notification.firebase_fcm.server_key%]
+         class:     "%firebase_fcm_client.class%"
+         arguments: ["%jp_firebase_notification.firebase_fcm.server_key%"]
+         autowire: true

@@ -10,7 +10,7 @@ Add Firebase Notification in your composer.json:
 ```js
 {
     "require": {
-        "jp/firebase-notification-Bundle": "dev-master"
+        "jp/firebase-notification-Bundle": "^2.0.0"
     }
 }
 ```
@@ -66,6 +66,23 @@ jp_firebase_notification:
     $fcm = $this->get('firebase_fcm_client');
     $fcm->createMessage(array(
         'to' => 'XXXXXXXX',
+        'title' => 'New message',
+        'body' => 'Hello World!',
+        'badge' => 1,
+        'data' => array(
+            'action' => "new_message"
+        )
+    ));
+    $data = $fcm->sendMessage();
+?>
+```
+
+###Create topic message and send message
+``` php
+<?php 
+    $fcm = $this->get('firebase_fcm_client');
+    $fcm->createTopicMessage(array(
+        'topic' => 'XXXXXXXX',
         'title' => 'New message',
         'body' => 'Hello World!',
         'badge' => 1,
