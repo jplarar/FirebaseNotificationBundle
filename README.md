@@ -81,8 +81,8 @@ jp_firebase_notification:
 ``` php
 <?php 
     $fcm = $this->get('firebase_fcm_client');
-    $fcm->createTopicMessage(array(
-        'topic' => 'XXXXXXXX',
+    $fcm->createMessage(array(
+        'topic' => '/topics/TOPIC_NAME',
         'title' => 'New message',
         'body' => 'Hello World!',
         'badge' => 1,
