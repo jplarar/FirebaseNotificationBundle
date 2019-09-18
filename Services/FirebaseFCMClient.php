@@ -39,9 +39,13 @@ class FirebaseFCMClient
         if (array_key_exists("badge", $message)) {
             $this->message["notification"]["badge"] = $message["badge"];
         }
+        if (array_key_exists("icon", $message)) {
+            $this->message["notification"]["icon"] = $message["icon"];
+        }
         if (array_key_exists("data", $message)) {
             $this->message["data"] = $message["data"];
         }
+
         return true;
     }
 
@@ -73,30 +77,6 @@ class FirebaseFCMClient
 
         return $response;
     }
-
-    /**
-     * @param $message
-     * @return bool
-     */
-    public function createTopicMessage($message)
-    {
-        if (!array_key_exists("topic", $message)) return false;
-        $this->message["topic"] = $message["topic"];
-        if (array_key_exists("title", $message)) {
-            $this->message["notification"]["title"] = $message["title"];
-        }
-        if (array_key_exists("body", $message)) {
-            $this->message["notification"]["body"] = $message["body"];
-        }
-        if (array_key_exists("badge", $message)) {
-            $this->message["notification"]["badge"] = $message["badge"];
-        }
-        if (array_key_exists("data", $message)) {
-            $this->message["data"] = $message["data"];
-        }
-        return true;
-    }
-
 
     public function deleteMessage()
     {
